@@ -31,6 +31,7 @@ E:\BackEnd\ezeq\src\main\java\com\portfolio\ezeq\Security\Repository\IUsuarioRep
 E:\BackEnd\ezeq\src\main\java\com\portfolio\ezeq\Dto\dtoHys.java
 E:\BackEnd\ezeq\src\main\java\com\portfolio\ezeq\Controller\CEducacion.java
 E:\BackEnd\ezeq\src\main\java\com\portfolio\ezeq\Security\Enums\RolNombre.java
+E:\BackEnd\ezeq\src\main\java\com\portfolio\ezeq\Interface\IPersonaService.java
 E:\BackEnd\ezeq\src\main\java\com\portfolio\ezeq\Security\MainSecurity.java
 E:\BackEnd\ezeq\src\main\java\com\portfolio\ezeq\Security\Service\UserDetailsImpl.java
 E:\BackEnd\ezeq\src\main\java\com\portfolio\ezeq\Controller\PersonaController.java

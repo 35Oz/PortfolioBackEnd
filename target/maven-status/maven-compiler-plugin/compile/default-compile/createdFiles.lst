@@ -8,6 +8,7 @@ com\portfolio\ezeq\Repository\IPersonaRepository.class
 com\portfolio\ezeq\Security\Entity\UsuarioPrincipal.class
 com\portfolio\ezeq\Dto\dtoPersona.class
 com\portfolio\ezeq\Controller\CEducacion.class
+com\portfolio\ezeq\Interface\IPersonaService.class
 com\portfolio\ezeq\Repository\Rhys.class
 com\portfolio\ezeq\Security\Dto\NuevoUsuario.class
 com\portfolio\ezeq\Service\ImpPersonaService.class
