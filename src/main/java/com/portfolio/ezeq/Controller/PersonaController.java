@@ -31,13 +31,6 @@ public class PersonaController {
         return new ResponseEntity(list, HttpStatus.OK);
     }
     
-    @PostMapping("/crear")
-    public String createPersona(@RequestBody Persona persona){
-        personaService.savePersona(persona);
-        return "la persona fue creada correctamente";
-    }
-    
-    
     @GetMapping("/detail/{id}")
     public ResponseEntity<Persona> getById(@PathVariable("id")int id){
         if(!personaService.existsById(id)){
