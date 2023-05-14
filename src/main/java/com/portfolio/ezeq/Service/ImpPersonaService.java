@@ -31,6 +31,11 @@ public class ImpPersonaService {
         ipersonaRepository.save(persona);
     }
     
+    @Override
+    public void savePersona(Persona persona){
+        ipersonaRepository.save(persona);
+    }
+    
     public void delete(int id){
         ipersonaRepository.deleteById(id);
     }
@@ -42,4 +47,6 @@ public class ImpPersonaService {
     public boolean existsByNombre(String nombre){
         return ipersonaRepository.existsByNombre(nombre);
     }
+
+ 
 }

@@ -33,7 +33,7 @@ public class PersonaController {
     
     @PostMapping("/crear")
     public String createPersona(@RequestBody Persona persona){
-        personaService.save(persona);
+        personaService.savePersona(persona);
         return "la persona fue creada correctamente";
     }
     
@@ -69,9 +69,6 @@ public class PersonaController {
         if(StringUtils.isBlank(dtopersona.getNombre())){
             return new ResponseEntity(new Mensaje("El campo no puede estar vacio"), HttpStatus.BAD_REQUEST);
         }
-        
-        
-        
         
         
         Persona persona = personaService.getOne(id).get();
