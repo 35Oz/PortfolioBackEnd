@@ -1,6 +1,7 @@
 package com.portfolio.ezeq.Service;
 
 import com.portfolio.ezeq.Entity.Persona;
+import com.portfolio.ezeq.Interface.IPersonaService;
 import com.portfolio.ezeq.Repository.IPersonaRepository;
 import jakarta.transaction.Transactional;
 import java.util.List;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Transactional
-public class ImpPersonaService {
+public class ImpPersonaService implements IPersonaService {
 
     @Autowired
     IPersonaRepository ipersonaRepository;
@@ -30,11 +31,7 @@ public class ImpPersonaService {
     public void save(Persona persona){
         ipersonaRepository.save(persona);
     }
-    
-    public void savePersona(Persona persona){
-        ipersonaRepository.save(persona);
-    }
-    
+   
     public void delete(int id){
         ipersonaRepository.deleteById(id);
     }
@@ -46,6 +43,28 @@ public class ImpPersonaService {
     public boolean existsByNombre(String nombre){
         return ipersonaRepository.existsByNombre(nombre);
     }
+
+    @Override
+    public List<Persona> getPersona() {
+      List<Persona> persona = ipersonaRepository.findAll();
+              return persona;
+    }
+
+    @Override
+    public void savePersona(Persona persona) {
+        ipersonaRepository.save(persona);
+    }
+
+    @Override
+    public void deletePersona(Long id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public Persona findPersona(Long id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 
  
 }

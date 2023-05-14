@@ -2,6 +2,7 @@ package com.portfolio.ezeq.Controller;
 
 import com.portfolio.ezeq.Dto.dtoPersona;
 import com.portfolio.ezeq.Entity.Persona;
+import com.portfolio.ezeq.Interface.IPersonaService;
 import com.portfolio.ezeq.Security.Controller.Mensaje;
 import com.portfolio.ezeq.Service.ImpPersonaService;
 import java.util.List;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonaController {
    @Autowired
     ImpPersonaService personaService;
+    IPersonaService ipersonaService;
     
     @GetMapping("/lista")
     public ResponseEntity<List<Persona>> list(){
@@ -39,6 +41,12 @@ public class PersonaController {
         
         Persona persona = personaService.getOne(id).get();
         return new ResponseEntity(persona, HttpStatus.OK);
+    }
+    
+    @PostMapping("/crear")
+    public String createPersona(@RequestBody Persona persona){
+        ipersonaService.savePersona(persona);
+        return "La persona fue creada correctamente";
     }
     
     
