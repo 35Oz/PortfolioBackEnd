@@ -31,7 +31,6 @@ public class ImpPersonaService {
         ipersonaRepository.save(persona);
     }
     
-    @Override
     public void savePersona(Persona persona){
         ipersonaRepository.save(persona);
     }
